@@ -58,9 +58,9 @@
     box-shadow: 0 0 3px 3px rgba(white, .4)
 
     &:nth-child(2n)
-        animation: star-blink--even 2s infinite linear
+        animation: star-blink 2s infinite linear
     &:nth-child(2n+1)
-        animation: star-blink--even 2s infinite linear
+        animation: star-blink 2s infinite linear
         animation-delay: 1s
 
     &._1
@@ -124,14 +124,7 @@
         top: 19%
         left: 65%
 
-@keyframes star-blink--even
-    0%
-        transform: scale(1)
-    50%
-        transform: scale($star-blink-scale)
-    100%
-        transform: scale(1)
-@keyframes star-blink--odd
+@keyframes star-blink
     0%
         transform: scale(1)
     50%
