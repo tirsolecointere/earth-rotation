@@ -23,7 +23,7 @@ h1, h2, h3, h4, h5, h6 {
 a {
   color: white;
   text-decoration: none;
-  transition: box-shadow 0.2s ease; }
+  transition: box-shadow 0.15s ease; }
   a:hover {
     box-shadow: 0 1px 0 white; }
 
