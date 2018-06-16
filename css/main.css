@@ -8,6 +8,7 @@ body, html {
   padding: 0; }
 
 body {
+  position: relative;
   font-family: "Lato", sans-serif;
   text-align: center;
   color: #eee;
@@ -61,10 +62,9 @@ a {
 .map {
   width: 200px;
   height: 200px;
-  background: lightblue;
   border-radius: 100%;
   box-shadow: inset -30px -20px 0 0 rgba(0, 0, 0, 0.1), inset -70px -30px 0 0 rgba(0, 0, 0, 0.1), inset 5px 5px 0 0 rgba(255, 255, 255, 0.2);
-  background: url("../img/map.png");
+  background: url("../img/map.png") lightblue;
   background-size: cover;
   animation: earth-rotation 3s linear infinite; }
 
@@ -79,7 +79,12 @@ a {
   height: 2px;
   background: white;
   border-radius: 100%;
-  box-shadow: 0 0 3px 3px rgba(255, 255, 255, 0.3); }
+  box-shadow: 0 0 3px 3px rgba(255, 255, 255, 0.4); }
+  .star:nth-child(2n) {
+    animation: star-blink--even 2s infinite linear; }
+  .star:nth-child(2n+1) {
+    animation: star-blink--even 2s infinite linear;
+    animation-delay: 1s; }
   .star._1 {
     top: 10%;
     left: 20%; }
@@ -140,5 +145,20 @@ a {
   .star._20 {
     top: 19%;
     left: 65%; }
+
+@keyframes star-blink--even {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(2); }
+  100% {
+    transform: scale(1); } }
+@keyframes star-blink--odd {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(2); }
+  100% {
+    transform: scale(1); } }
 
 /*# sourceMappingURL=main.css.map */

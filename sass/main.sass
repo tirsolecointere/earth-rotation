@@ -33,10 +33,9 @@
 .map
     width: 200px
     height: 200px
-    background: lightblue
     border-radius: 100%
     box-shadow: inset -30px -20px 0 0 rgba(black, .1), inset -70px -30px 0 0 rgba(black, .1), inset 5px 5px 0 0 rgba(white, .2)
-    background: url('../img/map.png')
+    background: url('../img/map.png') lightblue
     background-size: cover
     animation: earth-rotation 3s linear infinite
 
@@ -56,8 +55,13 @@
     height: 2px
     background: white
     border-radius: 100%
-    box-shadow: 0 0 3px 3px rgba(white, .3)
-    // box-shadow: 0 0 16px 16px rgba(white, .5)
+    box-shadow: 0 0 3px 3px rgba(white, .4)
+
+    &:nth-child(2n)
+        animation: star-blink--even 2s infinite linear
+    &:nth-child(2n+1)
+        animation: star-blink--even 2s infinite linear
+        animation-delay: 1s
 
     &._1
         top: 10%
@@ -119,3 +123,18 @@
     &._20
         top: 19%
         left: 65%
+
+@keyframes star-blink--even
+    0%
+        transform: scale(1)
+    50%
+        transform: scale($star-blink-scale)
+    100%
+        transform: scale(1)
+@keyframes star-blink--odd
+    0%
+        transform: scale(1)
+    50%
+        transform: scale($star-blink-scale)
+    100%
+        transform: scale(1)
