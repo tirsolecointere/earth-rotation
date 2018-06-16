@@ -1,2 +1,121 @@
 @import "_vars"
 @import "_reboot"
+
+.heading
+    position: relative
+    z-index: 20
+    margin-top: 2rem
+    padding: 0 1rem
+    h1
+        font-family: $MAIN_FONT
+        font-weight: 300
+        font-size: 3rem
+        margin-bottom: 0
+    span
+        font-size: 12px
+        text-transform: uppercase
+
+@media (max-width: 575.98px)
+    .heading
+        h1
+            font-size: 2.2rem
+
+.clouds, .map
+    +position(absolute, 0, 0, 0, 0)
+    margin: auto
+
+.clouds
+    width: 220px
+    height: 220px
+    img
+        position: relative
+        z-index: 10
+.map
+    width: 200px
+    height: 200px
+    background: lightblue
+    border-radius: 100%
+    box-shadow: inset -30px -20px 0 0 rgba(black, .1), inset -70px -30px 0 0 rgba(black, .1), inset 5px 5px 0 0 rgba(white, .2)
+    background: url('../img/map.png')
+    background-size: cover
+    animation: earth-rotation 3s linear infinite
+
+
+@keyframes earth-rotation
+    from
+        background-position: left center
+    to
+        background-position: -396px center
+
+
+// stars
+
+.star
+    position: absolute
+    width: 2px
+    height: 2px
+    background: white
+    border-radius: 100%
+    box-shadow: 0 0 3px 3px rgba(white, .3)
+    // box-shadow: 0 0 16px 16px rgba(white, .5)
+
+    &._1
+        top: 10%
+        left: 20%
+    &._2
+        top: 94%
+        left: 60%
+    &._3
+        top: 30%
+        left: 50%
+    &._4
+        top: 75%
+        left: 44%
+    &._5
+        top: 60%
+        left: 60%
+    &._6
+        top: 80%
+        left: 30%
+    &._7
+        top: 80%
+        left: 70%
+    &._8
+        top: 30%
+        left: 80%
+    &._9
+        top: 10%
+        left: 90%
+    &._10
+        top: 90%
+        left: 7%
+    &._11
+        top: 40%
+        left: 90%
+    &._12
+        top: 40%
+        left: 25%
+    &._13
+        top: 70%
+        left: 20%
+    &._14
+        top: 20%
+        left: 30%
+    &._15
+        top: 90%
+        left: 90%
+    &._16
+        top: 4%
+        left: 5%
+    &._17
+        top: 35%
+        left: 9%
+    &._18
+        top: 70%
+        left: 79%
+    &._19
+        top: 39%
+        left: 69%
+    &._20
+        top: 19%
+        left: 65%

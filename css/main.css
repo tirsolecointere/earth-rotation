@@ -1,3 +1,144 @@
+* {
+  margin: 0;
+  box-sizing: border-box; }
 
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: "Lato", sans-serif;
+  text-align: center;
+  color: #eee;
+  background: radial-gradient(#1C2B3B, #07080B);
+  font-size: 16px;
+  font-weight: 400;
+  overflow: hidden; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 1rem; }
+
+a {
+  color: white;
+  text-decoration: none;
+  transition: box-shadow 0.2s ease; }
+  a:hover {
+    box-shadow: 0 1px 0 white; }
+
+.heading {
+  position: relative;
+  z-index: 20;
+  margin-top: 2rem;
+  padding: 0 1rem; }
+  .heading h1 {
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-size: 3rem;
+    margin-bottom: 0; }
+  .heading span {
+    font-size: 12px;
+    text-transform: uppercase; }
+
+@media (max-width: 575.98px) {
+  .heading h1 {
+    font-size: 2.2rem; } }
+.clouds, .map {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto; }
+
+.clouds {
+  width: 220px;
+  height: 220px; }
+  .clouds img {
+    position: relative;
+    z-index: 10; }
+
+.map {
+  width: 200px;
+  height: 200px;
+  background: lightblue;
+  border-radius: 100%;
+  box-shadow: inset -30px -20px 0 0 rgba(0, 0, 0, 0.1), inset -70px -30px 0 0 rgba(0, 0, 0, 0.1), inset 5px 5px 0 0 rgba(255, 255, 255, 0.2);
+  background: url("../img/map.png");
+  background-size: cover;
+  animation: earth-rotation 3s linear infinite; }
+
+@keyframes earth-rotation {
+  from {
+    background-position: left center; }
+  to {
+    background-position: -396px center; } }
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 100%;
+  box-shadow: 0 0 3px 3px rgba(255, 255, 255, 0.3); }
+  .star._1 {
+    top: 10%;
+    left: 20%; }
+  .star._2 {
+    top: 94%;
+    left: 60%; }
+  .star._3 {
+    top: 30%;
+    left: 50%; }
+  .star._4 {
+    top: 75%;
+    left: 44%; }
+  .star._5 {
+    top: 60%;
+    left: 60%; }
+  .star._6 {
+    top: 80%;
+    left: 30%; }
+  .star._7 {
+    top: 80%;
+    left: 70%; }
+  .star._8 {
+    top: 30%;
+    left: 80%; }
+  .star._9 {
+    top: 10%;
+    left: 90%; }
+  .star._10 {
+    top: 90%;
+    left: 7%; }
+  .star._11 {
+    top: 40%;
+    left: 90%; }
+  .star._12 {
+    top: 40%;
+    left: 25%; }
+  .star._13 {
+    top: 70%;
+    left: 20%; }
+  .star._14 {
+    top: 20%;
+    left: 30%; }
+  .star._15 {
+    top: 90%;
+    left: 90%; }
+  .star._16 {
+    top: 4%;
+    left: 5%; }
+  .star._17 {
+    top: 35%;
+    left: 9%; }
+  .star._18 {
+    top: 70%;
+    left: 79%; }
+  .star._19 {
+    top: 39%;
+    left: 69%; }
+  .star._20 {
+    top: 19%;
+    left: 65%; }
 
 /*# sourceMappingURL=main.css.map */
