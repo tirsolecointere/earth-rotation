@@ -27,6 +27,10 @@ a {
   a:hover {
     box-shadow: 0 1px 0 white; }
 
+div[style^="text-align: right;position: fixed;z-index:9999999;"] {
+  opacity: 0;
+  visibility: hidden; }
+
 .heading {
   position: relative;
   z-index: 20;
@@ -44,29 +48,20 @@ a {
 @media (max-width: 575.98px) {
   .heading h1 {
     font-size: 2.2rem; } }
-.clouds, .map {
+.map {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  margin: auto; }
-
-.clouds {
-  width: 220px;
-  height: 220px; }
-  .clouds img {
-    position: relative;
-    z-index: 10; }
-
-.map {
+  margin: auto;
   width: 200px;
   height: 200px;
   border-radius: 100%;
   box-shadow: inset -30px -20px 0 0 rgba(0, 0, 0, 0.1), inset -70px -30px 0 0 rgba(0, 0, 0, 0.1), inset 5px 5px 0 0 rgba(255, 255, 255, 0.2);
   background: url("../img/map.png") lightblue;
   background-size: cover;
-  animation: earth-rotation 3s linear infinite; }
+  animation: earth-rotation 10s linear infinite; }
 
 @keyframes earth-rotation {
   from {
@@ -153,5 +148,26 @@ a {
     transform: scale(2); }
   100% {
     transform: scale(1); } }
+.quote {
+  display: block;
+  max-width: 600px;
+  margin: 0 auto 1rem;
+  padding: 1rem 1rem;
+  font-size: 14px;
+  font-weight: 300;
+  position: absolute;
+  right: 0;
+  bottom: 1rem;
+  left: 0;
+  text-shadow: 0 0 3px black; }
+  .quote__footer {
+    display: block;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.4);
+    margin-top: 1rem; }
+
+@media (max-width: 575.98px) {
+  .quote {
+    font-size: 13px; } }
 
 /*# sourceMappingURL=main.css.map */
